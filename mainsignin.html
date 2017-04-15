@@ -4,7 +4,7 @@
 <title>SignIn</title>
 <style>
 	
-	input{
+	input, .company{
 
 		-webkit-border-radius: 20px;
         -moz-border-radius: 20px;
@@ -15,12 +15,20 @@
 		height: 24px;
 		position: absolute;
 		display: block;
-		margin-left: 600px;
 		text-align: center;
-		margin-top: 100px;
 		background: #4e4c59;
 		border-style: none;
 		color: white;	
+	}
+
+	.left{
+			margin-left: 300px;
+			margin-top: 100px;
+	}
+
+	.Right{
+			margin-left: 900px;
+			margin-top: -300px;
 	}
 
 	button{
@@ -35,9 +43,9 @@
 		height: 50px;
 		position: absolute;
 		display: block;
-		margin-left: 600px;
+		margin-left: 0px;
 		text-align: center;
-		margin-top: 108px;
+		margin-top: 40px;
 		background:  #ed1c2a;
 		color: white;	
 	}
@@ -45,7 +53,8 @@
 </style>
 </head>
 <body>
-	<div class="box">	
+	<div class="box">
+	<div class="left">
 		<form>
 			<input type="text" placeholder="First Name" name="first"/>
 			</br></br></br>
@@ -53,15 +62,37 @@
 			</br></br></br>
 			<input type="text" placeholder="E-mail Address" name="email"/>
 			</br></br></br>
-			<input type="text" placeholder="Phone Number" name="phone"/>
-			</br></br></br>
-			<input type="text" placeholder="Username" name="user"/>
+			<input type="text" placeholder="Registered Phone Number" name="phone"/>
 			</br></br></br>
 			<input type="password" placeholder="Password" name="pass"/>
 			</br></br></br>
 			<input type="password" placeholder="Confirm Password" name="confirmpass"/>
 			</br></br><br />
-			<button type="submit">Sign In</button>
+			<input type="text" placeholder="Gas Connection Number" name="gas"/>
+			</br></br></br>
+			<div class="company">
+			<form action="/action_page.php">
+  				<select name="Company">
+    				<option value="Indane">Indane</option>
+    				<option value="Bharat">Bharat Gas</option>
+    				<option value="Hindustan">Hindustan Petroleum</option>
+    			</select>
+  			<br><br>
+  			</form>
+  			</div>
+  			</div>
+  			<div class="Right">
+  				<p>Previous 4 entries</p>
+  				<input type="text" placeholder="First Entry dd/mm/yy" name="Previous1"/>
+				</br></br></br>
+				<input type="text" placeholder="Second Entry dd/mm/yy" name="Previous2"/>
+				</br></br></br>
+  				<input type="text" placeholder="Third Entry dd/mm/yy" name="Previous3"/>
+				</br></br></br>
+  				<input type="text" placeholder="Fourth Entry dd/mm/yy" name="Previous4"/>
+				</br></br></br>
+				<button type="submit">Sign In</button>
+			</div>
 		</form>
 	</div>
 </body>
